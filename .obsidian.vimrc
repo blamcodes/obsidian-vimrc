@@ -57,8 +57,42 @@ exmap followlink obcommand editor:follow-link
 nmap <CR> :followlink
 
 "________________________________________
+" Search Commands
+"________________________________________
+exmap globalSearch obcommand global-search:open
+nmap <Space><Space>s :globalSearch
+exmap search obcommand editor:open-search
+nmap <Space>s :search
+
+"________________________________________
 " Editor Commands
 "________________________________________
+" window controls
+exmap wq obcommand workspace:close
+exmap q obcommand workspace:close
+nmap <Space>q :q
+
+exmap focusRight obcommand editor:focus-right
+nmap <C-w>l :focusRight
+
+exmap focusLeft obcommand editor:focus-left
+nmap <C-w>h :focusLeft
+
+exmap focusTop obcommand editor:focus-top
+nmap <C-w>k :focusTop
+
+exmap focusBottom obcommand editor:focus-bottom
+nmap <C-w>j :focusBottom
+
+exmap splitVertical obcommand workspace:split-vertical
+nmap <C-w>v :splitVertical
+
+exmap splitHorizontal obcommand workspace:split-horizontal
+nmap <C-w>s :splitHorizontal
+
+" New File
+exmap newfile obcommand file-explorer:new-file
+nmap <Space>n :newfile
 
 " Emulate Folding https://vimhelp.org/fold.txt.html#fold-commands
 exmap togglefold obcommand editor:toggle-fold
